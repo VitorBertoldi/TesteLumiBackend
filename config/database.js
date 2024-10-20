@@ -1,14 +1,11 @@
 const { Sequelize } = require('sequelize');
-require('dotenv').config(); // Certifique-se de que isso esteja no início do seu arquivo
+require('dotenv').config(); 
+const pg = require('pg');
 
 const sequelize = new Sequelize(process.env.POSTGRES_URL, {
     dialect: 'postgres',
-    dialectOptions: {
-        ssl: {
-            require: true, 
-            rejectUnauthorized: false 
-        }
-    },
+    dialectModule: pg
 });
+
 
 module.exports = sequelize;
