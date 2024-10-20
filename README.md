@@ -1,24 +1,33 @@
-# Projeto de Extração e Visualização de Faturas de Energia Elétrica
+# API para Extração e Gerenciamento de Faturas de Energia Elétrica
 
-Este projeto consiste em uma aplicação web para extrair, armazenar e visualizar dados de faturas de energia elétrica. A aplicação é composta por um back-end em Node.js e um front-end em React.
+## Descrição
 
-## Índice
+Esta API foi desenvolvida para extrair dados de faturas de energia elétrica, armazená-los em um banco de dados PostgreSQL e disponibilizá-los para visualização através de uma aplicação web.
 
-- [Descrição do Desafio](#descrição-do-desafio)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Pré-requisitos](#pré-requisitos)
-- [Instalação](#instalação)
-- [Execução](#execução)
-- [Uso da Aplicação](#uso-da-aplicação)
-- [Estrutura da Aplicação](#estrutura-da-aplicação)
-- [Testes Automatizados](#testes-automatizados)
-- [Envio e Hospedagem](#envio-e-hospedagem)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
+## Tecnologias Utilizadas
 
-## Descrição do Desafio
+- Node.js
+- Express
+- JavaScript
+- PostgreSQL
+- Sequelize (ORM)
+- pdf-parse (para extração de dados dos PDFs)
 
-O objetivo deste projeto é desenvolver um código que extrai dados relevantes de faturas de energia elétrica, organiza esses dados em um banco de dados PostgreSQL e os apresenta em uma aplicação web através de uma API.
+## Bibliotecas Utilizadas
+
+- **Express**: Framework web para Node.js.
+- **Sequelize**: ORM para Node.js que facilita a manipulação de dados em bancos SQL.
+- **pdf-parse**: Biblioteca para manipulação de arquivos PDF.
+- **dotenv**: Carregamento de variáveis de ambiente de um arquivo `.env`.
+- **Chart.js**: Biblioteca para gráficos.
+- **Axios**: Biblioteca para fazer requisições HTTP.
+
+## Instalação das Bibliotecas
+
+Para instalar as bibliotecas mencionadas, execute os seguintes comandos:
+
+```bash
+npm install express sequelize pdf-parse dotenv chart.js axios
 
 ### Funcionalidades:
 
@@ -31,7 +40,7 @@ O objetivo deste projeto é desenvolver um código que extrai dados relevantes d
 - **Front-end:** React.js
 - **Back-end:** Node.js (Express)
 - **Banco de Dados:** PostgreSQL
-- **Bibliotecas:** pdf-lib, Chart.js, Axios
+- **Bibliotecas:** pdf-parse, Chart.js, Axios
 
 ## Pré-requisitos
 
@@ -53,7 +62,7 @@ Para iniciar a aplicação em modo de desenvolvimento, execute o seguinte comand
 
 A aplicação será iniciada e estará disponível em http://localhost:3000 por padrão. Você pode abrir essa URL em um navegador para ver a aplicação em funcionamento.
 ```bash
-npm start
+node index.js
 
 ## Uso da Aplicação
 
